@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="icon" href="./img/logo-web.jpg" type="image/icon type">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"><button id='okButton' onclick="Alert.ok()">OK!</button></div>
+        </div>
+    </div>
+    <div id='runaway'>
+        <h1>RGB <br>(<span id='red'>,</span><span id='green'>,</span><span id='blue'></span>)</h1>
+        <!-- <img src="./pictures/RGB.png" id = 'img_sample' alt=""> -->
+    </div>
+    <div id='stripe'>
+        <!-- <button id = 'instructions'>how to play</button> -->
+        <button id='reset'>Play Again?</button>
+        <span id='displayMessage'></span>
+        <button id='easyBtn'>Easy</button>
+        <button id='hardBtn'>Hard</button>
+    </div>
+
+    <div id="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square last"></div>
+        <hr id="topp">
+        <button id='inst'><span class="mark">&quest;</span>INSTRUCTIONS</button>
+    </div>
+    <div id="inside_inst">
+        <!-- to be rendereed goes below this 'inside_inst' id  -->
+        <!-- <li>132,9,88 are the red,green and blue components respectively.Each of them are out of 255.</li> -->
+        <!-- <li><span id = 'mixred'>255</span> + <span id = 'mixgreen'>255</span> = <span id="mixyellow">yellow</span></li> -->
+        <img src="./img/rgb-mixer-200.png" alt=""><br><br>
+        <h2>The above example shows the mixing of the colors with various proportions, the max value of a color being
+            255 and the lowest being 0, you have to estimate the color which will be formed on mixing all these and
+            select from one of the below</h2>
+
+    </div>
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #000;
+	border-radius:7px; 
+	width:550px;
+	z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+</style>
+<script>
+function CustomAlert(){
+    this.render = function(dialog){
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = winH+"px";
+        dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxhead').innerHTML = "Acknowledge This Message";
+        document.getElementById('dialogboxbody').innerHTML = dialog;
+        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok()">OK</button>';
+    }
+	this.ok = function(){
+		document.getElementById('dialogbox').style.display = "none";
+		document.getElementById('dialogoverlay').style.display = "none";
+	}
+}
+var Alert = new CustomAlert();
+</script>
+</head>
+<body>
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>
+<h1>My web document content ...</h1>
+<h2>My web document content ...</h2>
+<button onclick="alert('You look very pretty today.')">Default Alert</button>
+<button onclick="Alert.render('You look very pretty today.')">Custom</button>
+<button onclick="Alert.render('And you also smell very nice.')">Custom Alert 2</button>
+<h3>My web document content ...</h3>
+</body>
+</html> -->
